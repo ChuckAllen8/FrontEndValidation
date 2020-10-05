@@ -1,0 +1,10 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h1>Profile</h1>
+
+<h3>@Model.FirstName @Model.LastName</h3>
+<h4>@Model.Email</h4>
+Password: @Model.Password

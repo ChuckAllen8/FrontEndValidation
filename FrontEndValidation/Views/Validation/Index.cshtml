@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Registration</h1>
+<div class="col-lg-5 text-right">
+    <form action="/Validation/Profile" method="post" onsubmit="return ErrorCheck()">
+        <label for="FirstName">First Name</label>
+        <input type="text" id="FirstName" name="FirstName" /><br />
+        <label hidden class="error" id="FirstName_Error" for="FirstName">Must be a complete first name, no initials</label><br />
+
+        <label for="LastName">Last Name</label>
+        <input type="text" id="LastName" name="LastName" /><br />
+        <label hidden class="error" id="LastName_Error" for="LastName">Must be a complete last name, no initials</label><br />
+
+        <label for="Email">Email</label>
+        <input type="text" id="Email" name="Email" /><br />
+        <label hidden class="error" id="Email_Error" for="Email">Email must be complete</label><br />
+
+        <label for="Password">Password</label>
+        <input type="password" id="Password" name="Password" /><br />
+        <label hidden class="error" id="Password_Error" for="Password">8 characters, 1 number, 1 upper and 1 lower case letter, 1 symbol</label><br />
+
+        <label for="ConfirmPassword">Re-Enter Password</label>
+        <input type="password" id="ConfirmPassword" name="ConfirmPassword" /><br />
+        <label hidden class="error" id="ConfirmPassword_Error" for="ConfirmPassword">Must match Password</label><br />
+
+        <input type="submit" value="Register" />
+    </form>
+</div>
