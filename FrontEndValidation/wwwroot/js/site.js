@@ -5,6 +5,7 @@
 
 function ErrorCheck() {
     let result = true;
+    let audio = document.getElementById('audio');
 
     //check first name
     let el = document.getElementById('FirstName');
@@ -69,6 +70,10 @@ function ErrorCheck() {
     else {
         el.style.borderColor = '#00FF00';
         el_error.hidden = true;
+    }
+
+    if (result == false) {
+        audio.play();
     }
 
     return result;
