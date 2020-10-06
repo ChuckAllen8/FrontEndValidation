@@ -10,7 +10,7 @@ function ErrorCheck() {
     //check first name
     let el = document.getElementById('FirstName');
     let el_error = document.getElementById('FirstName_Error');
-    if (!(el.value.match(/^[A-Za-z]{2,}[A-Za-z\'\-]*$/))) {
+    if (!(el.value.match(/^[A-Za-z][A-Za-z\'\-]+$/))) {
         result = false;
         el.style.borderColor = '#FF0000';
         el_error.hidden = false;
@@ -23,7 +23,7 @@ function ErrorCheck() {
     //check last name
     el = document.getElementById('LastName');
     el_error = document.getElementById('LastName_Error');
-    if (!(el.value.match(/^[A-Za-z]{2,}[A-Za-z\'\-]*$/))) {
+    if (!(el.value.match(/^[A-Za-z][A-Za-z\'\-]+$/))) {
         result = false;
         el.style.borderColor = '#FF0000';
         el_error.hidden = false;
